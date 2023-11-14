@@ -1,3 +1,3 @@
 # GymmyFrontend
 ja tu byłem
-ja tu byłem znowu
+znowu ty błem sie asfiawd 
