@@ -1,3 +1,3 @@
 # GymmyFrontend
 ja tu byłem
-//czesc 
+//czesc czolem witam
