@@ -1,1 +1,2 @@
 # GymmyFrontend
+ja tu byłem
