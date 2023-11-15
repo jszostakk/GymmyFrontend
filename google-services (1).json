@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "323278524362",
+    "project_id": "gimmy-firebase",
+    "storage_bucket": "gimmy-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:323278524362:android:382de71c51b6b703a00933",
+        "android_client_info": {
+          "package_name": "com.gimmy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6NBD9-xbJ66UineovjCcHng2DR06slKs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
