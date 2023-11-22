@@ -35,3 +35,4 @@ CMD [ "/bin/sh" ]
 
 CMD [ "npx", "expo", "start", "--host", "lan" ]
 
+
