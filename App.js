@@ -1,56 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { initializeApp } from "firebase/app";
-import firebaseConfig from "./firebase/firebaseConfig";
-import { getFirestore, collection, getDocs } from 'firebase/firestore';
-import { useEffect, useState } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import FirstView from './components/login/FirstView';
+import LoginView from './components/login/LoginView';
+import RegisterView from './components/login/RegisterView';
 
-const firebaseApp = initializeApp(firebaseConfig);
-const db = getFirestore(firebaseApp);
-const usersCollection = collection(db, 'users');
+const Stack = createStackNavigator();
 
-
-export default function App() {
-  const [users, setUsers] = useState([]);
-  useEffect(() => {
-    const getUsers = async () => {
-      const querySnapshot = await getDocs(usersCollection);
-      const usersData = [];
-      querySnapshot.forEach((doc) => {
-        const userData = doc.data();
-        usersData.push({
-          id: doc.id,
-          name: userData.name,
-          surname: userData.surname,
-          age: userData.age,
-        });
-      });
-      setUsers(usersData);
-    };
-
-    getUsers();
-  })
-  
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <Text>Test!</Text>
-      <Text>Users:</Text>
-      {users.map((user) => (
-        <Text key={user.id}>
-          {`Name: ${user.name}, Surname: ${user.surname}, Age: ${user.age}`}
-        </Text>
-      ))}
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="FirstView" component={FirstView} />
+        <Stack.Screen name="LoginView" component={LoginView} />
+        <Stack.Screen name="RegisterView" component={RegisterView} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
