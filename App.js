@@ -1,21 +1,7 @@
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import FirstView from './components/login/FirstView';
-import LoginView from './components/login/LoginView';
-import RegisterView from './components/login/RegisterView';
-
-const Stack = createStackNavigator();
+import StackNavigator from './navigator/Navigator';
 
 const App = () => {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="FirstView" component={FirstView} />
-        <Stack.Screen name="LoginView" component={LoginView} />
-        <Stack.Screen name="RegisterView" component={RegisterView} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+  return <StackNavigator />;
 };
 
 export default App;
