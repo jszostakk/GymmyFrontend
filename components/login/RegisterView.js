@@ -1,19 +1,22 @@
 import React from 'react';
-import { View, TextInput, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import {
+  View,
+  TextInput,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  KeyboardAvoidingView,
+} from 'react-native';
 
 const LoginView = () => {
   return (
-    <View style={styles.container}>
-        <Text style={styles.text}>Already a member?</Text>     
-      <TextInput
-        style={styles.input}
-        placeholder="Email"
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="Password"
-        secureTextEntry
-      />
+    <KeyboardAvoidingView
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+      style={styles.container}
+    >
+      <Text style={styles.text}>Already a member?</Text>
+      <TextInput style={styles.input} placeholder="Email" />
+      <TextInput style={styles.input} placeholder="Password" secureTextEntry />
       <TextInput
         style={styles.input}
         placeholder="Confirm password"
@@ -22,7 +25,7 @@ const LoginView = () => {
       <TouchableOpacity style={styles.button}>
         <Text style={styles.text}>Register</Text>
       </TouchableOpacity>
-    </View>
+    </KeyboardAvoidingView>
   );
 };
 
@@ -51,9 +54,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  text:{
+  text: {
     fontSize: 24,
-  }
+  },
 });
 
 export default LoginView;

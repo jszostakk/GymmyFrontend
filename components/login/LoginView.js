@@ -1,30 +1,37 @@
 import React from 'react';
-import { View, TextInput, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import {
+  View,
+  TextInput,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  KeyboardAvoidingView,
+} from 'react-native';
 
 const LoginView = ({ navigation }) => {
-    const goToRegister = () => {
-      navigation.navigate('RegisterView');
-    };
+  const goToRegister = () => {
+    navigation.navigate('RegisterView');
+  };
   return (
-    <View style={styles.container}>
-        <Text style={styles.text}>Already a member?</Text>     
-      <TextInput
-        style={styles.input}
-        placeholder="Email"
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="Hasło"
-        secureTextEntry
-      />
+    <KeyboardAvoidingView
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+      style={styles.container}
+    >
+      <Text style={styles.text}>Already a member?</Text>
+      <TextInput style={styles.input} placeholder="Email" />
+      <TextInput style={styles.input} placeholder="Hasło" secureTextEntry />
       <TouchableOpacity style={styles.button}>
         <Text style={styles.text}>Log in</Text>
       </TouchableOpacity>
-      <Text style={styles.text}>------ or ------</Text>
+      <View style={styles.orComponent}>
+        <View style={styles.orLine} />
+        <Text style={[styles.text, styles.orText]}>or</Text>
+        <View style={styles.orLine} />
+      </View>
       <TouchableOpacity style={styles.button} onPress={goToRegister}>
         <Text style={styles.text}>Register</Text>
       </TouchableOpacity>
-    </View>
+    </KeyboardAvoidingView>
   );
 };
 
@@ -53,9 +60,22 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  text:{
+  text: {
     fontSize: 24,
-  }
+  },
+  orComponent: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  orLine: {
+    height: 1,
+    width: '35%',
+    backgroundColor: 'grey',
+  },
+  orText: {
+    marginHorizontal: 20,
+  },
 });
 
 export default LoginView;
