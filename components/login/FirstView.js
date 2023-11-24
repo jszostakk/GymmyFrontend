@@ -11,7 +11,11 @@ const FirstView = ({ navigation }) => {
       <TouchableOpacity onPress={goToLogin} style={styles.button}>
         <Text style={styles.text}>Sign Up</Text>
       </TouchableOpacity>
-        <Text style={styles.text}>------ or ------</Text>
+      <View style={styles.orComponent}>
+        <View style={styles.orLine} />
+        <Text style={[styles.text, styles.orText]}>or</Text>
+        <View style={styles.orLine} />
+      </View>
       <TouchableOpacity style={styles.button}>
         <Text style={styles.text}>Continue with Google</Text>
       </TouchableOpacity>
@@ -37,9 +41,22 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  text:{
+  text: {
     fontSize: 24,
-  }
+  },
+  orComponent: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  orLine: {
+    height: 1,
+    width: '35%',
+    backgroundColor: 'grey',
+  },
+  orText: {
+    marginHorizontal: 20,
+  },
 });
 
 export default FirstView;
