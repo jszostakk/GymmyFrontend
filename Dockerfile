@@ -30,9 +30,6 @@ RUN yes | ${ANDROID_SDK_ROOT}/cmdline-tools/latest/bin/sdkmanager --install "pla
 EXPOSE 19000
 EXPOSE 19001
 
-# Add this line at the end of your Dockerfile
-CMD [ "/bin/sh" ]
-
 CMD [ "npx", "expo", "start", "--host", "lan" ]
 
 
