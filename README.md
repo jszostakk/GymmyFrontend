@@ -1,5 +1,19 @@
 # Instalacja środowiska
 
+## Wirtualizacja
+**1.Sprawdzamy wirtualizacje**
+Wchodzimy w menedżer zadań, następnie w wydajność, CPU i sprawdzamy czy mamy wirtualizaję włączoną
+<p>
+  <img src='./assets/readme/check-virtualization.jpg'>
+</p>
+Jeśli jest włączona, to możesz przejść do kroku z Node.js.
+
+**2.Wejście do biosa**
+Wchodzimy do biosa i włączamy wirtualizację
+<p>
+  <img src='./assets/readme/bios-virtualization.jpg'>
+</p>
+
 ## Node.js
 #### Windows
 **1. Pobranie Node.js**
