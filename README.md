@@ -116,3 +116,30 @@ Wejdź do katalogu, w którym rozpakowano Android Studio, a następnie uruchom s
 Po pierwszym uruchomieniu, postępuj zgodnie z instrukcjami kreatora konfiguracji środowiska programistycznego.
 
 Następnie przejdź do 4.kroku instrukcji windowsa i postępuj identycznie.
+
+## Dodanie zmiennych środowiskowych
+**1. Przejście do edytacji zmiennych środowiskowych**
+<p>
+  <img src='./assets/readme/environment_variable1.jpg'>
+</p>
+
+**2. Wybieramy zmienne środowiskowe**
+<p>
+  <img src='./assets/readme/environment_variable2.jpg'>
+</p>
+
+**3. Wybieramy zmienną `Path` a następnie opcję edytuj**
+<p>
+  <img src='./assets/readme/environment_variable3.jpg'>
+</p>
+
+**4.Wybieramy nowy a następnie dodajemy ścieżki do folderów**
+<p>
+  <img src='./assets/readme/environment_variable4.jpg'>
+</p>
+
+Domyślnie jest to instalowane na ścieżkach: `C:\Users\$użytkownik\AppData\Local\Android\Sdk\emulator`
+`C:\Users\$użytkownik\AppData\Local\Android\Sdk\emulator`
+**Proszę zmienić $użytkownik na swojego własnego systemowego użytkownika**
+
+**5. Naciskamy `OK` i resetujemy komputer**
