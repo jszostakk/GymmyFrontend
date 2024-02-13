@@ -1,25 +1,18 @@
 {
   "name": "gymmy",
-  "version": "1.0.0",
-  "main": "node_modules/expo/AppEntry.js",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@react-navigation/native": "^6.1.9",
-    "@react-navigation/stack": "^6.3.20",
-    "expo": "~49.0.15",
-    "expo-google-app-auth": "~8.3.0",
-    "expo-status-bar": "~1.6.0",
-    "firebase": "^10.6.0",
-    "react": "18.2.0",
-    "react-native": "0.72.6"
+    "vue": "^3.4.15"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
-  },
-  "private": true
+    "@vitejs/plugin-vue": "^5.0.3",
+    "vite": "^5.0.11"
+  }
 }
